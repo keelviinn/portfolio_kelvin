@@ -1,122 +1,13 @@
 import Link from "next/link";
-import { NextComponentType } from "next";
-import { useTheme } from "next-themes";
-import { motion } from "framer-motion";
 import { useState } from "react";
+import { Hambuger } from "./Hamburguer";
+import { DesktopNav, MobileNav } from "./Nav";
+import { ThemeChange } from "./ThemeButton";
 
-const navItems = [
-  { id: 1, href: "/", children: "About" },
-  { id: 2, href: "/", children: "Services" },
-  { id: 3, href: "/", children: "Projects" },
-];
-
-const Hambuger = ({ onClick, isOpen }: any) => {
-  const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-slate-80 dark:bg-white transition ease transform duration-300`;
-
-  return (
-    <>
-      <div
-        className={`${genericHamburgerLine} ${
-          isOpen
-            ? "rotate-45 translate-y-3 opacity-50 group-hover:opacity-100"
-            : "opacity-50 group-hover:opacity-100"
-        }`}
-      />
-      <div
-        className={`${genericHamburgerLine} ${
-          isOpen ? "opacity-0" : "opacity-50 group-hover:opacity-100"
-        }`}
-      />
-      <div
-        className={`${genericHamburgerLine} ${
-          isOpen
-            ? "-rotate-45 -translate-y-3 opacity-50 group-hover:opacity-100"
-            : "opacity-50 group-hover:opacity-100"
-        }`}
-      />
-    </>
-  );
-};
-
-const NavItem = ({ href, children, isMobile, onClick }: any) => {
-  return (
-    <li>
-      <Link href={href}>
-        <a
-          className={`text-gray-500 transition hover:text-gray-500/75 ${
-            isMobile
-              ? "dark:text-pink-500 dark:hover:text-pink-500/75"
-              : "dark:text-gray-200 dark:hover:text-gray-200/75"
-          } `}
-          onClick={isMobile ? onClick : undefined}
-        >
-          {children}
-        </a>
-      </Link>
-    </li>
-  );
-};
-
-export const Navigation: NextComponentType = () => {
-  const { systemTheme, theme, setTheme } = useTheme();
+export const Navigation = ({ navItems }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleHamburgerClick = () => setIsOpen(!isOpen);
-
-  const ThemeChange = () => {
-    const currentTheme = theme === "system" ? systemTheme : theme;
-
-    if (currentTheme === "dark") {
-      return (
-        <button
-          onClick={() => setTheme("light")}
-          className="bg-gray-200 dark:bg-gray-800 rounded-full p-2"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-            />
-          </svg>
-        </button>
-      );
-    } else {
-      return (
-        <button
-          onClick={() => setTheme("dark")}
-          className="bg-gray-200 dark:bg-gray-800 rounded-full p-2"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
-            />
-          </svg>
-        </button>
-      );
-    }
-  };
-
-  const variants = {
-    open: { opacity: 1, x: 0 },
-    closed: { opacity: 0, x: "100%" },
-  };
 
   return (
     <>
@@ -146,18 +37,7 @@ export const Navigation: NextComponentType = () => {
             </div>
 
             <div className="md:flex md:items-center md:gap-12">
-              <nav
-                aria-label="Site Nav"
-                className="DESKTOP-MENU hidden md:block"
-              >
-                <ul className="hidden md:flex items-center gap-6 text-sm">
-                  {navItems.map(({ id, children, href }) => (
-                    <NavItem key={id} href={href}>
-                      {children}
-                    </NavItem>
-                  ))}
-                </ul>
-              </nav>
+              <DesktopNav navItems={navItems} />
               <div className="flex items-center gap-4">
                 <div className="sm:flex sm:gap-4">
                   <Link href="/">
@@ -185,35 +65,7 @@ export const Navigation: NextComponentType = () => {
           </div>
         </div>
       </header>
-      <motion.nav
-        aria-label="Site Nav"
-        className="MOBILE-MENU md:hidden"
-        animate={isOpen ? "open" : "closed"}
-        variants={variants}
-      >
-        <ul className="flex flex-col absolute z-10 h-screen right-0 top-0 items-center w-2/3 py-10 gap-20 text-lg bg-white dark:bg-slate-700 justify-center">
-          {navItems.map(({ id, children, href }) => (
-            <NavItem
-              key={id}
-              href={href}
-              isMobile={true}
-              onClick={handleHamburgerClick}
-            >
-              {children}
-            </NavItem>
-          ))}
-          <div className="sm:flex sm:gap-4">
-            <Link href="/">
-              <a
-                className="rounded-md border-pink-500 border-2 px-8 py-4 text-sm font-medium text-pink-500 shadow"
-                onClick={handleHamburgerClick}
-              >
-                Resume
-              </a>
-            </Link>
-          </div>
-        </ul>
-      </motion.nav>
+      <MobileNav isOpen={isOpen} navItems={navItems} handleHamburgerClick={handleHamburgerClick} />
     </>
   );
 };
