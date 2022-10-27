@@ -81,7 +81,7 @@ export const MobileNav = ({
     >
       <motion.ul
         variants={variants}
-        className="flex flex-col absolute z-10 h-screen right-0 top-0 items-center w-2/3 py-10 gap-20 text-lg bg-white dark:bg-slate-700 justify-center"
+        className="flex flex-col absolute z-10 h-screen right-0 top-0 items-center w-2/3 py-10 gap-20 text-lg bg-gray-100 dark:bg-slate-700 justify-center"
       >
         {navItems.map(({ id, label, href }) => (
           <NavItem

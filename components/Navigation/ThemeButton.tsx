@@ -8,7 +8,7 @@ export const ThemeChange = () => {
     return (
       <button
         onClick={() => setTheme("light")}
-        className="bg-gray-200 dark:bg-gray-800 rounded-full p-2"
+        className="bg-gray-200 dark:bg-slate-800 rounded-full"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ export const ThemeChange = () => {
     return (
       <button
         onClick={() => setTheme("dark")}
-        className="bg-gray-200 dark:bg-gray-800 rounded-full p-2"
+        className="bg-gray-200 dark:bg-slate-800 rounded-full"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

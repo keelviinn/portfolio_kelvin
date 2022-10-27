@@ -13,7 +13,7 @@ export const Navigation = ({ navItems }: NavigationProps) => {
     <>
       <header
         aria-label="Site Header"
-        className="bg-white dark:bg-slate-800 w-full absolute left-0 top-0"
+        className="bg-gray-200 dark:bg-slate-800 w-full absolute left-0 top-0"
       >
         <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-24 items-center justify-between">
