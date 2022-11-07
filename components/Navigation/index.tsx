@@ -1,5 +1,3 @@
-"use client"
-
 import Link from "next/link";
 import { useState } from "react";
 import { Hambuger } from "./Hamburguer";
@@ -20,7 +18,7 @@ export const Navigation = ({ navItems }: NavigationProps) => {
         <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-24 items-center justify-between">
             <div className="flex-1 md:flex md:items-center md:gap-12">
-              <Link legacyBehavior={true} href="/">
+              <Link href="/">
                 <a className="block text-pink-600 dark:text-pink-300">
                   <span className="sr-only">Home</span>
                   <svg
@@ -42,7 +40,7 @@ export const Navigation = ({ navItems }: NavigationProps) => {
               <DesktopNav navItems={navItems} />
               <div className="flex items-center gap-4">
                 <div className="sm:flex sm:gap-4">
-                  <Link legacyBehavior={true} href="/">
+                  <Link href="/">
                     <a
                       className="rounded-md border-pink-500 border-2 px-8 py-4 text-sm font-medium text-pink-500 shadow dark:hover:bg-pink-200 transition-colors duration-300"
                       aria-label="Resume"

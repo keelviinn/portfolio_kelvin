@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply mx-auto;
+    @apply md:w-2/3 mx-auto;
     @apply bg-gray-200 dark:bg-slate-800;
   }
 }

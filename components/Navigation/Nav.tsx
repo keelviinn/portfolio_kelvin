@@ -21,7 +21,7 @@ const NavItem = ({ href, children, isMobile, onClick }: any) => {
 
   return (
     <motion.li variants={variants}>
-      <Link legacyBehavior={true} href={href}>
+      <Link href={href}>
         <a
           className={`text-gray-500 transition hover:text-gray-500/75 ${
             isMobile
@@ -94,7 +94,7 @@ export const MobileNav = ({
           </NavItem>
         ))}
         <div className="sm:flex sm:gap-4">
-          <Link legacyBehavior={true} href="/">
+          <Link href="/">
             <a
               className="rounded-md border-pink-500 border-2 px-8 py-4 text-sm font-medium text-pink-500 shadow"
               onClick={handleHamburgerClick}
