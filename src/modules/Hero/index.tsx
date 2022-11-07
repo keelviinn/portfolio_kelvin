@@ -1,13 +1,13 @@
 import { NextComponentType } from "next"
 
-export const Introduction: NextComponentType = () => {
+export const Hero: NextComponentType = () => {
   return (
     <section
-      aria-labelledby="introduction-title"
+      aria-labelledby="hero-title"
       className="py-40 px-4"
     >
       <div className="max-w-3xl mx-auto">
-        <p>Hi, I'm</p>
+        <p>Hi, I&apos;m</p>
       </div>
     </section>
   )
