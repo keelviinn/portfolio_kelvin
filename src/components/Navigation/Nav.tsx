@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { LinkButton } from "../LinkButton";
 
 const NavItem = ({ href, id, label, isMobile, onClick }: any) => {
   const variants = {
@@ -89,16 +90,7 @@ export const MobileNav = ({
             onClick={handleHamburgerClick}
           />
         ))}
-        <div className="sm:flex sm:gap-4">
-          <Link href="/">
-            <a
-              className="rounded-md border-cyan-500 border-2 px-8 py-4 text-sm font-medium text-cyan-500 shadow"
-              onClick={handleHamburgerClick}
-            >
-              Resume
-            </a>
-          </Link>
-        </div>
+        <LinkButton href="/">Resume</LinkButton>
       </motion.ul>
     </motion.nav>
   );

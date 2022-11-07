@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+
 import { Hambuger } from "./Hamburguer";
+import { LinkButton } from "../LinkButton";
 import { DesktopNav, MobileNav } from "./Nav";
 import { ThemeChange } from "./ThemeButton";
 
@@ -20,7 +22,9 @@ export const Navigation = ({ navItems }: NavigationProps) => {
           <div className="flex h-24 items-center justify-between">
             <div className="flex-1 md:flex md:items-center md:gap-12">
               <Link href="/">
-                <Image src="/images/kelvin.svg" alt="Kelvin Oliveira" width={170} height={40} />
+                <a className="flex items-center gap-2">
+                  <Image src="/images/kelvin.svg" alt="Kelvin Oliveira" width={170} height={40} />
+                </a>
               </Link>
             </div>
 
@@ -28,14 +32,9 @@ export const Navigation = ({ navItems }: NavigationProps) => {
               <DesktopNav navItems={navItems} />
               <div className="flex items-center gap-4">
                 <div className="sm:flex sm:gap-4 hidden">
-                  <Link href="/">
-                    <a
-                      className="rounded-md border-cyan-500 border-2 px-8 py-4 text-sm font-medium text-cyan-500 shadow hover:bg-cyan-200 transition-colors duration-200"
-                      aria-label="Resume"
-                    >
-                      Resume
-                    </a>
-                  </Link>
+                  <LinkButton href="/">
+                    Resume
+                  </LinkButton>
                 </div>
 
                 <ThemeChange />

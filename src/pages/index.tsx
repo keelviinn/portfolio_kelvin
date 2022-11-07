@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
-import { Nav } from "../components/Nav";
+import { Hero } from "../modules/Hero";
 
 const Home: NextPage = () => {
   return (
     <div>
-      App
+      <Hero />
     </div>
   );
 };
