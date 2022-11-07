@@ -1,3 +1,5 @@
+import { useTheme } from "next-themes";
+
 const SunIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +34,7 @@ const MoonIcon = () => (
   </svg>
 );
 
-export const ThemeChange = ({ useTheme }: any) => {
+export const ThemeChange = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
 

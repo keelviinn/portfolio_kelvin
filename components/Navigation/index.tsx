@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { useTheme } from "next-themes";
 import { Hambuger } from "./Hamburguer";
 import { DesktopNav, MobileNav } from "./Nav";
 import { ThemeChange } from "./ThemeButton";
@@ -53,7 +52,7 @@ export const Navigation = ({ navItems }: NavigationProps) => {
                   </Link>
                 </div>
 
-                <ThemeChange useTheme={useTheme} />
+                <ThemeChange />
 
                 <div className="block md:hidden z-20">
                   <button
