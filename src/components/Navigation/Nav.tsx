@@ -71,14 +71,15 @@ export const MobileNav = ({
 
   return (
     <motion.nav
-      aria-label="Site Nav"
-      className="MOBILE-MENU md:hidden"
+      aria-label="MOBILE-MENU"
+      id="MOBILE-MENU"
+      className="MOBILE-MENU md:hidden flex fixed h-screen right-0 top-0 z-10 w-2/3 justify-end"
       animate={isOpen ? "open" : "closed"}
       variants={sideBarVariants}
     >
       <motion.ul
         variants={variants}
-        className="flex flex-col absolute z-10 h-screen right-0 top-0 items-center w-2/3 py-10 gap-20 text-lg bg-gray-100 dark:bg-gray-700 justify-center"
+        className="flex flex-col w-full items-center gap-20 text-lg bg-gray-100 dark:bg-gray-700 justify-center"
       >
         {navItems.map(({ id, label, href }) => (
           <NavItem

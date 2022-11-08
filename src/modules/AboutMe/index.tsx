@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   SiJavascript,
   SiNodedotjs,
@@ -15,32 +16,51 @@ import {
   SiStripe,
   SiTypescript,
   SiTailwindcss,
+  SiRedis
 } from "react-icons/si";
+import { ExternalLink } from "../../components/ExternalLink";
+
 import { Icon } from "../../components/Icon";
 
-export const AboutMe = () => {
+interface AboutMeProps {
+  item: NavItem;
+}
+
+export const AboutMe = ({ item }: AboutMeProps) => {
   return (
     <section aria-labelledby="aboutme" className="w-full">
       <div className="py-12 items-start max-w-screen-xl px-6 mx-auto">
         <h1 className="text-2xl font-bold mb-3">
-          <span className="text-cyan-500 text-xl">01.</span> About Me
+          <span className="text-cyan-500 text-xl">{item.id}</span> {item.title}
+          <span className="text-cyan-500 text-xl ml-2">____________</span>
         </h1>
         <div className="flex flex-col-reverse md:flex-row">
           <div className="item py-4 mx-2 w-full md:w-1/2 h-auto flex-auto">
             <p className="max-w-lg text-justify text-base dark:text-gray-200 text-gray-600 font-normal my-4">
-              Hello! My name is <span className="text-gray-400">Kelvin Henrique</span> I&apos;m an Electrical Engineer
-              and System and Software Developer. I was born in Sao Paulo,
-              Brazil, and currently living in Dublin, Ireland. I enjoy creating
-              things that live on the internet. My interest in web development
-              started in 2018 when I decided to open a small ISP business and
-              started studying Networking and Programming.
+              Hello! My name is{" "}
+              <span className="text-gray-400">Kelvin Henrique</span> I&apos;m an
+              Electrical Engineer and System and Software Developer. I was born
+              in Sao Paulo, Brazil, and currently living in Dublin, Ireland. I
+              enjoy creating things that live on the internet. My interest in
+              web development started in 2018 when I decided to open a small ISP
+              business and started studying Networking and Programming.
             </p>
 
             <p className="max-w-lg text-justify text-base dark:text-gray-200 text-gray-600 font-normal my-4">
               Fast-forward to today, and I&apos;ve had the privilege of working
-              as a <span className="text-cyan-500">Web Developer</span> in a
-              content publisher, a start-up, and a huge corporation. My main
-              focus these days is building web applications as a{" "}
+              as a <span className="text-cyan-500">Web Developer</span> in a{" "}
+              <ExternalLink href="https://site.eurekadigital.app/">
+                content publisher
+              </ExternalLink>
+              , a{" "}
+              <ExternalLink href="https://clusterstack.io/en">
+                start-up
+              </ExternalLink>
+              , and a{" "}
+              <ExternalLink href="https://pathable.com/">
+                huge corporation
+              </ExternalLink>
+              . My main focus these days is building web applications as a{" "}
               <span className="text-cyan-500">Full Stack Developer</span>{" "}
               working with the latest tech in the market to achieve better
               performance in the application.
@@ -51,7 +71,7 @@ export const AboutMe = () => {
             </p>
           </div>
           <div className="item py-4 mx-2 w-full md:w-1/2 h-auto flex-auto">
-            <div className="md:mt-12 flex justify-center">
+            <div className="md:mt-12 flex justify-center ">
               <Image
                 src="/images/kelvin.jpeg"
                 alt="Kelvin Oliveira"
@@ -116,6 +136,12 @@ export const AboutMe = () => {
             label="MongoDB"
             className="text-green-400"
             key="mongodb"
+          />
+          <Icon
+            icon={SiRedis}
+            label="Redis"
+            className="text-red-400"
+            key="redis"
           />
           <Icon
             icon={SiNextdotjs}

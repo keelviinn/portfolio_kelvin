@@ -1,6 +1,6 @@
 import { useTheme } from "next-themes";
 
-export const ThemeChange = () => {
+export const ThemeChange = ({ className }: { className?: string;  }) => {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
 
@@ -8,7 +8,7 @@ export const ThemeChange = () => {
     return (
       <button
         onClick={() => setTheme("light")}
-        className="rounded-full"
+        className={`rounded-full ${className}`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ export const ThemeChange = () => {
     return (
       <button
         onClick={() => setTheme("dark")}
-        className="bg-gray-200 dark:bg-gray-500 rounded-full"
+        className={`bg-gray-200 dark:bg-gray-500 rounded-full ${className}`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

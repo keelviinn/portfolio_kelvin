@@ -5,7 +5,7 @@
 @layer base {
   body {
     @apply bg-gray-200 dark:bg-gray-800;
-    @apply text-gray-800 dark:text-gray-200;
+    @apply text-gray-500 dark:text-gray-200;
   }
 }
 
@@ -17,6 +17,10 @@
 
 body, input, textarea, select, button {
   font: 400 1rem "Roboto", sans-serif;
+}
+
+.blur > *:not(.nav) {
+  filter: blur(4px) brightness(0.7);
 }
 
 button {

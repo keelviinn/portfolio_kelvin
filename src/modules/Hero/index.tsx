@@ -1,4 +1,5 @@
 import { NextComponentType } from "next";
+import { ExternalLink } from "../../components/ExternalLink";
 import { LinkButton } from "../../components/LinkButton";
 
 export const Hero: NextComponentType = () => {
@@ -19,10 +20,10 @@ export const Hero: NextComponentType = () => {
           I&apos;m a software engineer specializing in javascript and typescript
           stack and providing exceptional digital experiences. Currently,
           I&apos;m focused on building web services at{" "}
-          <span className="text-cyan-500">ClusterStack</span>.
+          <ExternalLink href="https://clusterstack.io/en">ClusterStack</ExternalLink>.
         </p>
 
-        <LinkButton href="/" className="my-6">
+        <LinkButton href="https://www.linkedin.com/in/khenriqqe/" className="my-6">
           Check my <span className="text-blue-500">LinkedIn</span>
         </LinkButton>
       </div>
