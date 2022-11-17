@@ -91,7 +91,9 @@ export const MobileNav = ({
             onClick={handleHamburgerClick}
           />
         ))}
-        <LinkButton href="/">Resume</LinkButton>
+        <LinkButton href="https://docs.google.com/document/d/1sguXssN2o_zgBiO67ZhoBa3tlkSAM86Px2i9_4IoUf0/edit?usp=sharing">
+          Resume
+        </LinkButton>
       </motion.ul>
     </motion.nav>
   );

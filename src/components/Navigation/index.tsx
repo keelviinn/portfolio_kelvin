@@ -41,7 +41,9 @@ export const Navigation = ({ navItems }: NavigationProps) => {
               <DesktopNav navItems={navItems} />
               <div className="flex items-center gap-4">
                 <div className="sm:flex sm:gap-4 hidden">
-                  <LinkButton href="https://docs.google.com/document/d/1sguXssN2o_zgBiO67ZhoBa3tlkSAM86Px2i9_4IoUf0/edit?usp=sharing">Resume</LinkButton>
+                  <LinkButton href="https://docs.google.com/document/d/1sguXssN2o_zgBiO67ZhoBa3tlkSAM86Px2i9_4IoUf0/edit?usp=sharing">
+                    Resume
+                  </LinkButton>
                 </div>
 
                 <ThemeChange className={"mr-6 sm:mr-0"} />

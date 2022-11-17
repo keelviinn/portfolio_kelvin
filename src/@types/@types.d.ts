@@ -15,3 +15,18 @@ declare type Experience = {
   period: string;
   responsibilities: string[];
 }
+
+declare type Repo = {
+  id: number;
+  name: string;
+  avatar: string;
+  owner_url: string;
+  owner_login: string;
+  description: string;
+  url: string;
+  language: string;
+  stars: number;
+  forks: number;
+  page: string;
+  created_at: string;
+}

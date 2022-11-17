@@ -32,7 +32,7 @@ export const AboutMe = ({ item }: AboutMeProps) => {
       <div className="py-12 items-start max-w-screen-xl px-6 mx-auto">
         <h1 className="text-2xl font-bold mb-3">
           <span className="text-cyan-500 text-xl">{item.id}</span> {item.title}
-          <span className="text-cyan-500 text-xl ml-2">____________</span>
+          <div className="w-10 border-b-2 border-cyan-500 inline-block ml-2"/>
         </h1>
         <div className="flex flex-col-reverse md:flex-row">
           <div className="item py-4 mx-2 w-full md:w-1/2 h-auto flex-auto">

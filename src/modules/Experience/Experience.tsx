@@ -15,7 +15,7 @@ export const ExperienceItem = ({
         </ExternalLink>
       </h2>
       <p className="text-sm text-start text-gray-500 my-2">{period}</p>
-      <ul className="text-sm text-start text-gray-300">
+      <ul className="text-sm text-start text-gray-300 md:h-64 h-80">
         {responsibilities.map((responsibility, i) => (
           <li key={i} className="flex gap-2 mt-2">
             <span className="text-cyan-500">-</span>

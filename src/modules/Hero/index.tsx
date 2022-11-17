@@ -16,7 +16,7 @@ export const Hero: NextComponentType = () => {
           Let&apos;s build the future 🔨
         </h2>
 
-        <p className="max-w-lg text-right text-base dark:text-gray-400 text-gray-600 font-bold mb-4 md:mb-8">
+        <p className="max-w-xl text-right text-base dark:text-gray-400 text-gray-600 font-bold mb-4 md:mb-8">
           I&apos;m a software engineer specializing in javascript and typescript
           stack and providing exceptional digital experiences. Currently,
           I&apos;m focused on building web services at{" "}
