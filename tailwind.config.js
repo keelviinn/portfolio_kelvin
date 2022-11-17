@@ -27,7 +27,7 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['Roboto', ...fontFamily.sans]
+        sans: ['Roboto', 'Poppins', ...fontFamily.sans]
       },
       typography: (theme) => ({
         DEFAULT: {

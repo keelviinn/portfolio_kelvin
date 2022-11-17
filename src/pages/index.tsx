@@ -1,3 +1,4 @@
+import { Footer } from "../components/Footer";
 import { AboutMe } from "../modules/AboutMe";
 import { Experience } from "../modules/Experience";
 import { Hero } from "../modules/Hero";
@@ -26,6 +27,7 @@ const Home = ({ navItems, experiences, repos }: HomeProps) => {
         item={navItems.find(({ id }) => id === "03.") as NavItem}
         repos={repos}
       />
+      <Footer />
     </div>
   );
 };

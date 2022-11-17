@@ -22,14 +22,13 @@ const NavItem = ({ href, id, label, isMobile, onClick }: any) => {
 
   return (
     <motion.li variants={variants}>
-      <Link href={href}>
-        <a
-          className={`text-gray-500 transition hover:text-gray-500/75 dark:text-gray-200 dark:hover:text-gray-200/75`}
-          onClick={isMobile ? onClick : undefined}
-        >
-          <span className="text-cyan-500">{id}</span> {label}
-        </a>
-      </Link>
+      <a
+        className={`text-gray-500 transition hover:text-gray-500/75 dark:text-gray-200 dark:hover:text-gray-200/75`}
+        onClick={isMobile ? onClick : undefined}
+        href={href}
+      >
+        <span className="text-cyan-500">{id}</span> {label}
+      </a>
     </motion.li>
   );
 };

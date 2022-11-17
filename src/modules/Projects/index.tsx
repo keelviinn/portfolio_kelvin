@@ -7,7 +7,7 @@ interface ProjectsProps {
 
 export const Projects = ({ item, repos }: ProjectsProps) => {
   return (
-    <section aria-labelledby="projects" className="w-full">
+    <section aria-labelledby="projects" id="projects" className="w-full">
       <div className="py-12 items-start max-w-screen-xl px-6 mx-auto">
         <h1 className="text-2xl font-bold mb-3">
           <span className="text-cyan-500 text-xl">{item.id}</span> {item.title}

@@ -7,6 +7,9 @@
     @apply bg-gray-200 dark:bg-gray-800;
     @apply text-gray-500 dark:text-gray-200;
   }
+  html {
+    @apply scroll-smooth;
+  }
 }
 
 * {

@@ -11,7 +11,7 @@ export const Experience = ({ item, experiences }: ExperienceProps) => {
   const [experience, setExperience] = useState<Experience>(experiences[0]);
 
   return (
-    <section aria-labelledby="experience" className="max-w-3xl mx-auto py-10">
+    <section aria-labelledby="experience" id="experience" className="max-w-3xl mx-auto py-10">
       <div className="py-12 items-start max-w-screen-xl px-6 mx-auto">
         <h1 className="text-2xl font-bold mb-3 text-end">
           <span className="text-cyan-500 text-xl">{item.id}</span> {item.title}

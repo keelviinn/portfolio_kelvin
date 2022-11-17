@@ -28,7 +28,7 @@ interface AboutMeProps {
 
 export const AboutMe = ({ item }: AboutMeProps) => {
   return (
-    <section aria-labelledby="aboutme" className="w-full">
+    <section aria-labelledby="aboutme" id="aboutme" className="w-full">
       <div className="py-12 items-start max-w-screen-xl px-6 mx-auto">
         <h1 className="text-2xl font-bold mb-3">
           <span className="text-cyan-500 text-xl">{item.id}</span> {item.title}
