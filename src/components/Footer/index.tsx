@@ -24,7 +24,7 @@ export const Footer = () => {
           >
             <SiWhatsapp size={32} color="#25D366" />
           </a>
-          <a href="mailto:" target="_blank" rel="noreferrer">
+          <a href="mailto:keelviinn@gmail.com" target="_blank" rel="noreferrer">
             <FaEnvelope size={32} color="#d6d3d2" />
           </a>
         </div>

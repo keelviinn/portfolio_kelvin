@@ -5,7 +5,9 @@ import { FiExternalLink, FiLink } from "react-icons/fi";
 
 export const RepoCard = ({ repo }: { repo: Repo }) => {
   return (
-    <div className="relative flex flex-col justify-between overflow-hidden rounded-md p-8 hover:shadow-lg hover:-mt-2 bg-gray-100 dark:bg-gray-700 transition-all duration-300 h-60">
+    <div
+      className="relative flex flex-col justify-between overflow-hidden rounded-md p-8 hover:shadow-lg hover:-mt-2 bg-gray-100 dark:bg-gray-700 transition-all duration-300 h-60"
+    >
       <div className="justify-between sm:flex">
         <div>
           <h3 className="text-xl font-bold text-gray-900 dark:text-gray-200">
