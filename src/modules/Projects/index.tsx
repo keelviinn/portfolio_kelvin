@@ -1,4 +1,4 @@
-import { RepoCard } from "../../components/Card";
+import { RepoCard } from "../../components/Card/RepoCard";
 
 interface ProjectsProps {
   item: NavItem;

@@ -32,14 +32,20 @@ export const Hero: NextComponentType = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SiLinkedin size={32} />
+            <SiLinkedin
+              size={32}
+              className="text-gray-500 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-500"
+            />
           </a>
           <a
             href="https://github.com/keelviinn/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SiGithub size={32} />
+            <SiGithub
+              size={32}
+              className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+            />
           </a>
         </div>
       </div>

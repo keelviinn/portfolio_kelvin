@@ -17,11 +17,7 @@ export const Footer = () => {
         </p>
 
         <div className="flex justify-center mt-8 gap-4">
-          <a
-            href="https://wa.me/353832056034"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://wa.me/353832056034" target="_blank" rel="noreferrer">
             <SiWhatsapp size={32} color="#25D366" />
           </a>
           <a href="mailto:keelviinn@gmail.com" target="_blank" rel="noreferrer">
@@ -39,14 +35,20 @@ export const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <SiLinkedin size={32} />
+                <SiLinkedin
+                  size={32}
+                  className="text-gray-500 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-500"
+                />
               </a>
               <a
                 href="https://github.com/keelviinn/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <SiGithub size={32} />
+                <SiGithub
+                  size={32}
+                  className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                />
               </a>
             </div>
           </div>

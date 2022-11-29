@@ -1,7 +1,6 @@
 import { format } from "date-fns";
-import Image from "next/image";
 import Link from "next/link";
-import { FiExternalLink, FiLink } from "react-icons/fi";
+import { FiExternalLink, FiLink, FiGithub } from "react-icons/fi";
 
 export const RepoCard = ({ repo }: { repo: Repo }) => {
   return (
@@ -23,13 +22,13 @@ export const RepoCard = ({ repo }: { repo: Repo }) => {
           {repo.page && (
             <Link href={`${repo.page}`} legacyBehavior>
               <a target="_blank">
-                <FiLink className="w-6 h-6 text-gray-400 dark:text-gray-200 cursor-pointer ml-2" />
+                <FiExternalLink className="w-6 h-6 text-gray-400 dark:text-gray-200 cursor-pointer ml-2" />
               </a>
             </Link>
           )}
           <Link href={repo.url} legacyBehavior>
             <a target="_blank">
-              <FiExternalLink className="w-6 h-6 text-gray-400 dark:text-gray-200 cursor-pointer" />
+              <FiGithub className="w-6 h-6 text-gray-400 dark:text-gray-200 cursor-pointer" />
             </a>
           </Link>
         </div>
