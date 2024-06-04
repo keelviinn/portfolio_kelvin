@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import {
   SiJavascript,
   SiNodedotjs,
@@ -16,11 +15,106 @@ import {
   SiStripe,
   SiTypescript,
   SiTailwindcss,
-  SiRedis
+  SiRedis,
+  SiVuedotjs,
+  SiNuxtdotjs
 } from "react-icons/si";
 import { ExternalLink } from "../../components/ExternalLink";
 
 import { Icon } from "../../components/Icon";
+
+const icons = [
+    {
+        icon: SiJavascript,
+        label: "JavaScript",
+        color: "text-yellow-400",
+    },
+    {
+        icon: SiTypescript,
+        label: "TypeScript",
+        color: "text-blue-400",
+    },
+    {
+        icon: SiNodedotjs,
+        label: "NodeJS",
+        color: "text-green-400",
+    },
+    {
+        icon: SiReact,
+        label: "React",
+        color: "text-blue-400",
+    },
+    {
+        icon: SiVuedotjs,
+        label: "VueJS",
+        color: "text-green-400",
+    },
+    {
+        icon: SiNuxtdotjs,
+        label: "NuxtJS",
+        color: "text-green-400",
+    },
+    {
+        icon: SiRedux,
+        label: "Redux",
+        color: "text-purple-400",
+    },
+    {
+        icon: SiGraphql,
+        label: "GraphQL",
+        color: "text-pink-400",
+    },
+    {
+        icon: SiAzuredevops,
+        label: "Azure DevOps",
+        color: "text-blue-400",
+    },
+    {
+        icon: SiAmazonaws,
+        label: "AWS",
+        color: "text-yellow-400",
+    },
+    {
+        icon: SiMongodb,
+        label: "MongoDB",
+        color: "text-green-400",
+    },
+    {
+        icon: SiRedis,
+        label: "Redis",
+        color: "text-red-400",
+    },
+    {
+        icon: SiNextdotjs,
+        label: "NextJS",
+        color: "text-black",
+    },
+    {
+        icon: SiMeteor,
+        label: "Meteor",
+        color: "text-blue-400",
+    },
+    {
+        icon: SiCypress,
+        label: "Cypress",
+        color: "text-green-400",
+    },
+    {
+        icon: SiJest,
+        label: "Jest",
+        color: "text-red-400",
+    },
+    {
+        icon: SiStripe,
+        label: "Stripe",
+        color: "text-purple-400",
+    },
+    {
+        icon: SiTailwindcss,
+        label: "TailwindCSS",
+        color: "text-blue-400",
+    },
+]
 
 interface AboutMeProps {
   item: NavItem;
@@ -83,102 +177,14 @@ export const AboutMe = ({ item }: AboutMeProps) => {
           </div>
         </div>
         <div className="flex flex-wrap justify-center gap-8 md:gap-10 px-4 md:px-0">
-          <Icon
-            icon={SiJavascript}
-            label="JavaScript"
-            className="text-yellow-400"
-            key="javascript"
-          />
-          <Icon
-            icon={SiTypescript}
-            label="TypeScript"
-            className="text-blue-400"
-            key="typescript"
-          />
-          <Icon
-            icon={SiNodedotjs}
-            label="NodeJS"
-            className="text-green-400"
-            key="nodejs"
-          />
-          <Icon
-            icon={SiReact}
-            label="React"
-            className="text-blue-400"
-            key="react"
-          />
-          <Icon
-            icon={SiRedux}
-            label="Redux"
-            className="text-purple-400"
-            key="redux"
-          />
-          <Icon
-            icon={SiGraphql}
-            label="GraphQL"
-            className="text-pink-400"
-            key="graphql"
-          />
-          <Icon
-            icon={SiAzuredevops}
-            label="Azure DevOps"
-            className="text-blue-400"
-            key="azuredevops"
-          />
-          <Icon
-            icon={SiAmazonaws}
-            label="AWS"
-            className="text-yellow-400"
-            key="aws"
-          />
-          <Icon
-            icon={SiMongodb}
-            label="MongoDB"
-            className="text-green-400"
-            key="mongodb"
-          />
-          <Icon
-            icon={SiRedis}
-            label="Redis"
-            className="text-red-400"
-            key="redis"
-          />
-          <Icon
-            icon={SiNextdotjs}
-            label="NextJS"
-            className="text-black"
-            key="nextjs"
-          />
-          <Icon
-            icon={SiMeteor}
-            label="Meteor"
-            className="text-blue-400"
-            key="meteor"
-          />
-          <Icon
-            icon={SiCypress}
-            label="Cypress"
-            className="text-green-400"
-            key="cypress"
-          />
-          <Icon
-            icon={SiJest}
-            label="Jest"
-            className="text-red-400"
-            key="jest"
-          />
-          <Icon
-            icon={SiStripe}
-            label="Stripe"
-            className="text-purple-400"
-            key="stripe"
-          />
-          <Icon
-            icon={SiTailwindcss}
-            label="TailwindCSS"
-            className="text-blue-400"
-            key="tailwindcss"
-          />
+            {icons.map((icon, i) => (
+                <Icon
+                icon={icon.icon}
+                label={icon.label}
+                className={`${icon.color}`}
+                key={i}
+                />
+            ))}
         </div>
       </div>
     </section>

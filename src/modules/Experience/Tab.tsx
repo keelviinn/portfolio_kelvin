@@ -17,7 +17,7 @@ export const Tab = ({ experience, setExperience, experiences }: TabProps) => {
           key={i}
         >
           <button
-            className="w-max"
+            className="text-left"
             onClick={() => setExperience(item)}
           >
             {item.company.name}
